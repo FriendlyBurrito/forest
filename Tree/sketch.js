@@ -1,4 +1,5 @@
 
+ 
   var axiom ="F";
   var sentence = axiom;
   var len = 100;
@@ -65,16 +66,13 @@ function turtle(){
   }
 }
 
-var pressed=false;
+var pressed=0;
 function mousePressed() {
- if (!pressed) {sound.play();
- turtle();
- generate();
-generate();
- generate();
-  generate();
-  pressed=true;
-}
+  if (pressed <4){
+   sound.play();
+   generate();
+   pressed++;
+ }
 }
 function setup() {
   sound=loadSound('pop.mp3');
@@ -84,7 +82,7 @@ angle = radians(24);
 var canvas = createCanvas(window.innerWidth, window.innerHeight);
   canvas.position(0,0);
  background(5);
-
+    turtle();
 
 //var button;
 //button = createButton('Generate');
