@@ -1,5 +1,7 @@
 
 
+
+
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -10,32 +12,31 @@
     <script>
     $(document).ready(function() {
 
-      $(".p5link").hide();
+   $(".p5link").hide();
       $(".javalink").hide();
       $(".cpluspluslink").hide();
 
-<!-- p5 hoverinimas -->
-      $(p5).hover(
-          function(){
-            $(".p5link").show();
+<!-- p5 hover -->
+    $(p5).hover(
+        function(){
+          $(".p5link").show();
           },
           function(){
-            $(".p5link").hide();
+          $(".p5link").hide();
           }
-
       );
 
-      $(".p5link").hover(
-          function(){
-            $(".p5link").show();
-          },
-          function(){
-            $(".p5link").hide();
-          }
+  $(".p5link").hover(
+      function(){
+        $(".p5link").show();
+      },
+      function(){
+        $(".p5link").hide();
+      }
+  );
 
-      );
-  });
-
+  
+});
     </script>
 </head>
 
@@ -43,21 +44,25 @@
 
   <table class="fixed">
    <tr>
-     <th id ="p5"> p5 </th>
-     <th id ="Java"> Java </th>
-     <th id ="cplusplus"> C++ </th>
+      <th id ="p5" class="top"> p5 </th>
+      <th id ="Java" class="top"> fgagaa </th>
+     <th id ="cplusplus" class="top" > gasfa </th>
+        <th id ="cplusplus" class="top" > xaxa </th>
+
    </tr>
    <tr>
-     <td class="p5link"> <a href="https://friendlyburrito.github.io/forest/Tree/"> Tree </a>    </td>
-     <td class="javalink">Second</td>
-     <td class="cpluspluslink">Third</td>
+     <th class="p5link"> <a href="https://friendlyburrito.github.io/forest/Tree/"> Tree </a>    </td>
+     <th class="javalink"> Java </td>
+     <th class="cpluspluslink">Third</td>
    </tr>
 
-     <td class="p5link"> <a href="https://friendlyburrito.github.io/forest/MobileDraw/">  Drawing </a>  </td>
-     <td class="javalink">Second</td>
-     <td class="cpluspluslink">Third</td>
+     <th class="p5link"> <a href="https://friendlyburrito.github.io/forest/MobileDraw/"> Drawing </a> </td>
+     <th class="javalink">Second</td>
+     <th class="cpluspluslink">Third</td>
    </tr>
  </table>
 
+
 </body>
 </html>
+
