@@ -40,7 +40,7 @@ function turtle(){
   resetMatrix();
 //  background(0);
   translate(width / 2, height);
-  stroke(190,0,50);
+  stroke(0,0,0);
   for (var i =0; i<sentence.length; i++){
     var current = sentence.charAt(i);
 
