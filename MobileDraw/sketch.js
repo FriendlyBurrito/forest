@@ -1,6 +1,6 @@
 function setup() {
  createCanvas(displayWidth, displayHeight);
- strokeWeight(10)
+ strokeWeight(7)
  stroke(0);
 }
 
