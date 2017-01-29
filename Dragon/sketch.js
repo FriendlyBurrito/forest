@@ -57,6 +57,15 @@ function turtle(){
     else if ( current == "-"){
       rotate(-angle);
     }
+    else if ( current == "X"){
+      pop(); 
+    }
+    else if ( current == "Y"){
+     push();
+    }
+
+
+
 
   }
 }
@@ -83,3 +92,4 @@ function setup() {
 //button = createButton('Generate');
 //button.mousePressed(generate);
 }
+
