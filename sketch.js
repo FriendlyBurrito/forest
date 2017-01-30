@@ -1,9 +1,10 @@
 
 function setup(){
 
-  createCanvas(window.innerWidth, window.innerHeight);
-    x=window.innerWidth/2;
-    y=window.innerHeight/2;
+createCanvas(window.innerWidth,window.innerHeight);
+x=window.innerWidth/2;
+y=window.innerHeight/2;
+
 
 }
 
@@ -13,40 +14,20 @@ function draw(){
   g=random(255);
   b=random(255);
 
-  stroke(r,g,b);
-  strokeWeight(2);
-  point(x,y);
-/*
-  var r = floor(random(4));
-  switch (r){
-  case 0:
-    x = x-1;
-  break;
-  case 1:
-    x = x+1;
-  break;
-  case 2:
-    y= y+1
-  break;
-  case 3:
-    y=y-1;
-  break;
-}*/
 
-}
+    if (keyIsDown(LEFT_ARROW))
+      x-=1.5;
 
-function keyPressed() {
-  if (keyCode === LEFT_ARROW) {
-    x = x-1;
-  }
+    if (keyIsDown(RIGHT_ARROW))
+      x+=1.5;
 
-  else if (keyCode === RIGHT_ARROW) {
-    x = x+1;
-  }
-  else if (keyCode === UP_ARROW) {
-    y = y-1;
-  }
-  else if (keyCode === DOWN_ARROW) {
-    y = y+1;
-  }
+    if (keyIsDown(UP_ARROW))
+      y-=1.5;
+
+    if (keyIsDown(DOWN_ARROW))
+      y+=1.5;
+       //clear(); kad taskas judetu nieko nepiesiant uz saves
+       stroke(255);
+      fill(r,g,b);
+      ellipse(x,y,5,5);
 }
