@@ -11,7 +11,7 @@ li {
     float: left;
 }
 
-li a, .dropbtn {
+li a, .p5button {
     display: inline-block;
     color: white;
     text-align: center;
@@ -19,7 +19,7 @@ li a, .dropbtn {
     text-decoration: none;
 }
 
-li a:hover, .dropdown:hover .dropbtn {
+li a:hover, .dropdown:hover .p5button {
     background-color: red;
 }
 
@@ -47,3 +47,4 @@ li.dropdown {
 .dropdown-content a:hover {background-color: #f1f1f1}
 
 .show {display:block;}
+
