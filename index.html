@@ -1,68 +1,83 @@
-
-
-
-
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
 <head>
+<style>
+.dropbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
 
-    <script type="text/javascript" src="jquery-3.1.1.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="style.css">
+.dropbtn:hover, .dropbtn:focus {
+    background-color: #3e8e41;
+}
 
-    <script>
-    $(document).ready(function() {
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
 
-   $(".p5link").hide();
-      $(".javalink").hide();
-      $(".cpluspluslink").hide();
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+   	 min-width: 10%;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
 
-<!-- p5 hover -->
-    $(p5).hover(
-        function(){
-          $(".p5link").show();
-          },
-          function(){
-          $(".p5link").hide();
-          }
-      );
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+  	  display: block;
+}
 
-  $(".p5link").hover(
-      function(){
-        $(".p5link").show();
-      },
-      function(){
-        $(".p5link").hide();
-      }
-  );
+.dropdown a:hover {background-color: #f1f1f1}
 
-  
-});
-    </script>
+.show {display:block;}
+</style>
 </head>
-
 <body>
 
-  <table class="fixed">
-   <tr>
-      <th id ="p5" class="top"> p5 </th>
-      <th id ="Java" class="top"> fgagaa </th>
-     <th id ="cplusplus" class="top" > gasfa </th>
-        <th id ="cplusplus" class="top" > xaxa </th>
+<h2>Clickable Dropdown</h2>
+<p>Click on the button to open the dropdown menu.</p>
 
-   </tr>
-   <tr>
-     <th class="p5link"> <a href="https://friendlyburrito.github.io/forest/Tree/"> Tree </a>    </td>
-     <th class="javalink"> Java </td>
-     <th class="cpluspluslink">Third</td>
-   </tr>
+<div class="dropdown">
+<button onclick="myFunction()" class="dropbtn">Dropdown</button>
+  <div id="myDropdown" class="dropdown-content">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </div>
+</div>
 
-     <th class="p5link"> <a href="https://friendlyburrito.github.io/forest/MobileDraw/"> Drawing </a> </td>
-     <th class="javalink">Second</td>
-     <th class="cpluspluslink">Third</td>
-   </tr>
- </table>
+<script>
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
 
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
 
 </body>
 </html>
-
