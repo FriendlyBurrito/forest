@@ -1,7 +1,7 @@
 
 function setup(){
 
-createCanvas(window.innerWidth,window.innerHeight);
+createCanvas(1100,500);
 x=window.innerWidth/2;
 y=window.innerHeight/2;
 
