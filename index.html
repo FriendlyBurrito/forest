@@ -34,10 +34,12 @@
 toggle between hiding and showing the dropdown content */
 function p5Function() {
     document.getElementById("p5dropdown").classList.toggle("show");
+      document.getElementById("javadropdown").classList.remove("show");
 }
 
 function javaFunction(){
     document.getElementById("javadropdown").classList.toggle("show");
+    document.getElementById("p5dropdown").classList.remove("show");
 }
 // Close the dropdown if the user clicks outside of it
 
