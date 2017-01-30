@@ -8,26 +8,41 @@
 
 <ul>
 
-  <li class="dropdown">
-    <a href="javascript:void(0)" class="dropbtn" onclick="myFunction()">Dropdown</a>
-    <div class="dropdown-content" id="myDropdown">
+  <li class="dropdown" id="p5">
+    <a href="javascript:void(0)" class="p5button" onclick="p5Function()">p5</a>
+     <div class="dropdown-content" id="p5dropdown">
       <a href="https://friendlyburrito.github.io/forest/Tree/">Tree</a>
       <a href="https://friendlyburrito.github.io/forest/MobileDraw/">Drawing</a>
     </div>
   </li>
+
+  <li class="dropdown" id="java">
+    <a href="javascript:void(0)" class="javabutton" onclick="javaFunction()">Java</a>
+     <div class="dropdown-content" id="javadropdown">
+      <a href="https://friendlyburrito.github.io/forest/Tree/">Tree</a>
+      <a href="https://friendlyburrito.github.io/forest/MobileDraw/">Drawing</a>
+    </div>
+  </li>
+
+
+
 </ul>
 
 
 <script>
 /* When the user clicks on the button,
 toggle between hiding and showing the dropdown content */
-function myFunction() {
-    document.getElementById("myDropdown").classList.toggle("show");
+function p5Function() {
+    document.getElementById("p5dropdown").classList.toggle("show");
 }
 
+function javaFunction(){
+    document.getElementById("javadropdown").classList.toggle("show");
+}
 // Close the dropdown if the user clicks outside of it
+
 window.onclick = function(e) {
-  if (!e.target.matches('.dropbtn')) {
+  if (!e.target.matches('.p5button') && !e.target.matches('.javabutton')) {
 
     var dropdowns = document.getElementsByClassName("dropdown-content");
     for (var d = 0; d < dropdowns.length; d++) {
@@ -38,6 +53,7 @@ window.onclick = function(e) {
     }
   }
 }
+
 </script>
 
 </body>
