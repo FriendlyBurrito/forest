@@ -16,7 +16,7 @@ function draw(){
   stroke(r,g,b);
   strokeWeight(2);
   point(x,y);
-
+/*
   var r = floor(random(4));
   switch (r){
   case 0:
@@ -31,6 +31,22 @@ function draw(){
   case 3:
     y=y-1;
   break;
+}*/
+
+}
+
+function keyPressed() {
+  if (keyCode === LEFT_ARROW) {
+    x = x-1;
   }
 
+  else if (keyCode === RIGHT_ARROW) {
+    x = x+1;
+  }
+  else if (keyCode === UP_ARROW) {
+    y = y-1;
+  }
+  else if (keyCode === DOWN_ARROW) {
+    y = y+1;
+  }
 }
