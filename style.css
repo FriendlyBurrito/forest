@@ -23,7 +23,7 @@ li a, .p5button {
 }
 
 li a:hover, .dropdown:hover .p5button {
-    background-color: red;
+    background-color: #890000;
 }
 
 li.dropdown {
