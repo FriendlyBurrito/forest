@@ -1,36 +1,62 @@
-body {
-    margin:0; padding:0;
-}
+ body {
+  margin:0;
+  padding:0;
+  }
+ canvas {display:block;}    /* remove scrollbars */
+      canvas:focus {outline:0;} /* remove blue outline around canvas */
+      #enter {display:block;}
+      #exit {display:none;}
+
 
 ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: black;
+    background-color: #333;
+    height: 55px;
 }
 
 li {
     float: left;
 }
 
+#title{
+
+  font-family: "Courier New", Courier, monospace;
+  float:left;
+  margin-left: 40px;
+  color: white;
+  margin-top: -3px;
+}
 li a, .p5button {
     display: inline-block;
     color: white;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
+    margin-top: 5px;
+    margin-right: 20px;
 }
 
 li a:hover, .dropdown:hover .p5button {
-    background-color: #890000;
+    background-color: red;
 }
 
 li.dropdown {
     display: inline-block;
+    float:right;
 }
 
+.side {
+width: 500px;
+height: 500px;
+background-color: red;
+
+
+}
 .dropdown-content {
+    right:0;
     display: none;
     position: absolute;
     background-color: #f9f9f9;
@@ -50,4 +76,3 @@ li.dropdown {
 .dropdown-content a:hover {background-color: #f1f1f1}
 
 .show {display:block;}
-
