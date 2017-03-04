@@ -1,11 +1,11 @@
 
- 
   var axiom ="F";
   var sentence = axiom;
   var len = 100;
   var rules = [];
   var angle;
   var sound;
+  var timer=0;
   rules[0] = {
   a: "F",
   b: "FF+[+F-F-F]-[-F+F+F]"
@@ -46,8 +46,8 @@ function turtle(){
     var current = sentence.charAt(i);
 
     if(current == "F"){
-      line(0,0,0,-len)
-      translate(0, -len)
+      line(0,0,0,-len);
+      translate(0, -len);
     }
     else if ( current == "+"){
       rotate(angle);
@@ -65,7 +65,7 @@ function turtle(){
     }
   }
 }
-
+/*
 var pressed=0;
 function mousePressed() {
   if (pressed <4){
@@ -73,18 +73,30 @@ function mousePressed() {
    generate();
    pressed++;
  }
-}
+}*/
+
 function setup() {
+  angle = radians(24);
   sound=loadSound('pop.mp3');
-    background(0);
-  frameRate(1);
-angle = radians(24);
 var canvas = createCanvas(window.innerWidth, window.innerHeight);
   canvas.position(0,0);
- background(5);
-    turtle();
+  // background(5);
+
+
+  turtle();
 
 //var button;
 //button = createButton('Generate');
 //button.mousePressed(generate);
 }
+
+
+function draw() {
+timer++;
+if (timer == 20) generate();
+if (timer == 25) generate();
+if (timer == 30) generate();
+if (timer == 35) generate();
+
+}
+
